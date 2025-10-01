@@ -7,6 +7,12 @@
   - [Key Difference](#key-difference)
 - [02. Important Terminology](#02-important-terminology)
 - [03. GitHub-Specific Terms](#03-github-specific-terms)
+- [04. Git Configuration (Quick Setup)](#04-git-configuration-quick-setup)
+- [05. Git Standard Workflow](#05-git-standard-workflow)
+  - [1. Working Directory](#1-working-directory)
+  - [2. Staging Area](#2-staging-area)
+  - [3. Local Repository](#3-local-repository)
+  - [4. Remote Repository](#4-remote-repository)
 
 # 01. Introduction to Git and GitHub
 
@@ -137,3 +143,66 @@
 5. **Watch**
 
    Get notified when a repo has updates.
+
+---
+
+# 04. Git Configuration (Quick Setup)
+
+1. **Check Git version**
+
+```bash
+git --version
+```
+
+2. **Set your identity**
+
+```bash
+git config --global user.name "Your Name"
+git config --global user.email "youremail@example.com"
+```
+
+3. **Set default branch (optional)**
+
+```bash
+git config --global init.defaultBranch main
+```
+
+4. **Set default editor (optional)**
+
+```bash
+git config --global core.editor "code --wait"
+```
+
+5. **Check settings**
+
+```bash
+git config --list
+```
+
+---
+
+# 05. Git Standard Workflow
+
+In a typical Git Workflow, there are four core components:
+
+## 1. Working Directory
+
+- Current state of the Git directory.
+- Contains new files that are not yet tracked and files modified since the last version.
+
+## 2. Staging Area
+
+- The intermediate zone between the working directory and the repository.
+- It contains the changes made in the working directory that Git will add to the repository during the next commit.
+
+## 3. Local Repository
+
+- A working local copy of a remote repository.
+- Stores the committed history of the project.
+
+## 4. Remote Repository
+
+- Files stored remotely in platforms like **GitHub**, **GitLab**, or **Azure DevOps**.
+- Allows collaboration and sharing of code with others.
+
+![alt text](image.png)
