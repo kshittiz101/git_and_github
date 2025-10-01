@@ -149,4 +149,4 @@ In a typical Git Workflow, there are four core components:
 - Files stored remotely in platforms like **GitHub**, **GitLab**, or **Azure DevOps**.
 - Allows collaboration and sharing of code with others.
 
-![alt text](image.png)
+![alt text](images/git-workflow.png)
