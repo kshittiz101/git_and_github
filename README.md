@@ -60,91 +60,35 @@
 
 # 02. Important Terminology
 
-1. **Repository (Repo)**
-
-   A folder where your project and its history are stored.
-
-2. **Commit**
-
-   A saved snapshot of your project at a specific time.
-
-3. **Branch**
-
-   A separate line of development — like a copy of the main code where you can test changes.
-
-4. **Merge**
-
-   Combining changes from one branch into another (e.g., feature branch → main branch).
-
-5. **Clone**
-
-   Making a full copy of a GitHub repository onto your local computer.
-
-6. **Pull**
-
-   Downloading the latest changes from GitHub to your local repo.
-
-7. **Push**
-
-   Uploading your changes from local Git to GitHub.
-
-8. **Fork**
-
-   Your personal copy of someone else’s GitHub repo (used to contribute or experiment).
-
-9. **Pull Request (PR)**
-
-   A request to merge your changes into another branch/repo (often reviewed before merging).
-
-10. **Staging Area (Index)**
-
-    A temporary space where files are kept before committing.
-
-11. **HEAD**
-
-    A pointer showing the current branch/commit you’re working on.
-
-12. **Remote**
-
-    The online version of your repo (like on GitHub).
-
-13. **Origin**
-
-    The default name Git gives to the remote repository you cloned from.
-
-14. **Conflict (Merge Conflict)**
-
-    Happens when two people change the same part of a file, and Git asks you to decide which version to keep.
-
-15. **.gitignore**
-
-    A file that tells Git which files/folders to skip (e.g., temp files, passwords).
+| Term                      | Definition                                                                 |
+| ------------------------- | -------------------------------------------------------------------------- |
+| Repository (Repo)         | A folder where your project and its history are stored.                    |
+| Commit                    | A saved snapshot of your project at a specific time.                       |
+| Branch                    | A separate line of development — like a copy of the main code for testing. |
+| Merge                     | Combining changes from one branch into another.                            |
+| Clone                     | Making a full copy of a GitHub repository onto your local computer.        |
+| Pull                      | Downloading the latest changes from GitHub to your local repo.             |
+| Push                      | Uploading your changes from local Git to GitHub.                           |
+| Fork                      | Your personal copy of someone else’s repo (to contribute or experiment).   |
+| Pull Request (PR)         | A request to merge your changes into another branch/repo.                  |
+| Staging Area (Index)      | Temporary space where files are kept before committing.                    |
+| HEAD                      | A pointer showing the current branch/commit you’re working on.             |
+| Remote                    | The online version of your repo (like on GitHub).                          |
+| Origin                    | The default name Git gives to the remote repository you cloned from.       |
+| Conflict (Merge Conflict) | When two people edit the same part of a file, Git asks to resolve.         |
+| .gitignore                | A file that tells Git which files/folders to skip.                         |
 
 ---
 
 # 03. GitHub-Specific Terms
 
-1. **Issues**
-
-   A way to track bugs, tasks, or feature requests.
-
-2. **Actions (CI/CD)**
-
-   Automations to build, test, or deploy your project directly from GitHub.
-
-3. **Wiki**
-
-   A documentation area inside a GitHub repo.
-
-4. **Star**
-
-   A way to bookmark or show appreciation for a repository.
-
-5. **Watch**
-
-   Get notified when a repo has updates.
-
----
+| Term            | Definition                                               |
+| --------------- | -------------------------------------------------------- |
+| Issues          | A way to track bugs, tasks, or feature requests.         |
+| Actions (CI/CD) | Automations to build, test, or deploy your project.      |
+| Wiki            | A documentation area inside a GitHub repo.               |
+| Star            | A way to bookmark or show appreciation for a repository. |
+| Watch           | Get notified when a repository has updates.              |
 
 # 04. Git Configuration (Quick Setup)
 
