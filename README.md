@@ -13,6 +13,12 @@
   - [2. Staging Area](#2-staging-area)
   - [3. Local Repository](#3-local-repository)
   - [4. Remote Repository](#4-remote-repository)
+  - [](#)
+- [06. Git Branch](#06-git-branch)
+  - [🔹 What is a Branch?](#-what-is-a-branch)
+  - [🔹 How Branch Works](#-how-branch-works)
+  - [🔹 Common Branch Commands](#-common-branch-commands)
+  - [🔹 Example Workflow](#-example-workflow)
 
 # 01. Introduction to Git and GitHub
 
@@ -149,4 +155,58 @@ In a typical Git Workflow, there are four core components:
 - Files stored remotely in platforms like **GitHub**, **GitLab**, or **Azure DevOps**.
 - Allows collaboration and sharing of code with others.
 
-![alt text](images/git-workflow.png)
+## ![alt text](images/git-workflow.png)
+
+# 06. Git Branch
+
+## 🔹 What is a Branch?
+
+- A **branch** is like a separate **line of development** in Git. (Lets say it a different timeline)
+- By default, Git creates a branch called `main` (or `master`).
+- You can make new branches to work on **features, bug fixes, or experiments** without affecting the main code.
+  ![alt text](images/git-branch.png)
+
+👉 **Analogy:**
+
+Think of a branch as a **parallel copy of your project**. You can work on it independently, and later merge it back into the main project.
+
+---
+
+## 🔹 How Branch Works
+
+1. You create a new branch (copy of current code).
+2. Work on it (add/commit changes).
+3. Switch between branches as needed.
+4. Merge the branch back into `main` when done.
+
+---
+
+## 🔹 Common Branch Commands
+
+| Command                       | Description                                       |
+| ----------------------------- | ------------------------------------------------- |
+| `git branch`                  | List all branches in the repo.                    |
+| `git branch branch_name`      | Create a new branch.                              |
+| `git checkout branch_name`    | Switch to an existing branch.                     |
+| `git checkout -b branch_name` | Create **and** switch to a new branch (shortcut). |
+| `git merge branch_name`       | Merge another branch into the current branch.     |
+| `git branch -d branch_name`   | Delete a branch (after merge).                    |
+| `git branch -D branch_name`   | Force delete a branch.                            |
+| `git switch branch_name`      | (Newer alternative to checkout) Switch branches.  |
+| `git switch -c branch_name`   | Create + switch branch (same as checkout -b).     |
+
+---
+
+## 🔹 Example Workflow
+
+```bash
+git branch feature-login        # create a new branch
+git checkout feature-login      # switch to it
+# (make changes, add, commit)
+git checkout main               # go back to main
+git merge feature-login         # merge feature into main
+git branch -d feature-login     # delete the branch
+
+```
+
+---
