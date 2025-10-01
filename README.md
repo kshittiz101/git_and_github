@@ -19,6 +19,10 @@
   - [🔹 How Branch Works](#-how-branch-works)
   - [🔹 Common Branch Commands](#-common-branch-commands)
   - [🔹 Example Workflow](#-example-workflow)
+- [07. Git Merge](#07-git-merge)
+  - [What is Git Merge ?](#what-is-git-merge-)
+  - [How it works ?](#how-it-works-)
+  - [🔹 How to perform Git Merge](#-how-to-perform-git-merge)
 
 # 01. Introduction to Git and GitHub
 
@@ -210,3 +214,55 @@ git branch -d feature-login     # delete the branch
 ```
 
 ---
+
+# 07. Git Merge
+
+## What is Git Merge ?
+
+Merging is Git's way of putting a forked history back together again. The git merge command lets you take the independent lines of development created by git branch and integrate them into a single branch.
+Git merge is used to combine changes from one branch into another.
+Example: merging a feature branch back into main.
+
+## How it works ?
+
+Git merge is used to combine two branches into one unified history. When you merge, Git looks at the two branch tips and finds their common ancestor (the point where both branches started). It then creates a special “merge commit” that connects both histories together. This merge commit has two parent commits, one from each branch, which makes it different from normal commits. If the changes are in different parts of the project, Git automatically merges them. But if both branches change the same file or the same line, Git cannot decide which version to keep — this is called a merge conflict, and you must resolve it manually before completing the merge.
+Lets say you have below senarios:
+![alt text](images/git-merge-1.png)
+
+## 🔹 How to perform Git Merge
+
+1. **Choose the branch to merge into**
+   Switch to the branch where you want changes to go (usually `main`).
+
+   ```bash
+   git checkout main
+   ```
+
+2. **Run merge command**
+   Merge another branch (e.g., `feature`) into the current branch.
+
+   ```bash
+   git merge feature
+   ```
+
+3. **Git finds common ancestor**
+   Git looks at both branches and finds the last commit where they shared the same history.
+
+4. **Create merge commit**
+   Git makes a special commit that has **two parents**, combining both branch histories.
+
+5. **Auto-merge or conflict**
+
+   - If no overlapping changes → merge happens automatically.
+   - If both branches changed the same file/line → **merge conflict** occurs.
+
+6. **Resolve conflicts (if any)**
+   Open the files, decide which changes to keep, then mark as resolved.
+
+   ```bash
+   git add conflicted_file
+   git commit
+   ```
+
+   Final output will look like below:
+   ![alt text](images/git-merge-2.png)
