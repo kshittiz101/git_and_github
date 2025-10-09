@@ -227,6 +227,7 @@ Example: merging a feature branch back into main.
 
 Git merge is used to combine two branches into one unified history. When you merge, Git looks at the two branch tips and finds their common ancestor (the point where both branches started). It then creates a special “merge commit” that connects both histories together. This merge commit has two parent commits, one from each branch, which makes it different from normal commits. If the changes are in different parts of the project, Git automatically merges them. But if both branches change the same file or the same line, Git cannot decide which version to keep — this is called a merge conflict, and you must resolve it manually before completing the merge.
 Lets say you have below senarios:
+
 ![alt text](images/git-merge-1.png)
 
 ## 🔹 How to perform Git Merge
@@ -265,4 +266,5 @@ Lets say you have below senarios:
    ```
 
    Final output will look like below:
+
    ![alt text](images/git-merge-2.png)
